@@ -59,173 +59,181 @@
         </pluginRepository>
     </pluginRepositories>
 
-    <dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <!-- JUnit -->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>               <!--A unit testing framework -->
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
 
-        <!-- JUnit -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>               <!--A unit testing framework -->
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
+            <!--ZK-->
+            <dependency>
+                <groupId>org.zkoss.zk</groupId>
+                <artifactId>zkbind</artifactId>              <!--  synchronizing data between the View and ViewModel -->
+                <version>${zk.version}</version>
+            </dependency>
 
-        <!--ZK-->
-        <dependency>
-            <groupId>org.zkoss.zk</groupId>
-            <artifactId>zkbind</artifactId>              <!--  synchronizing data between the View and ViewModel -->
-            <version>${zk.version}</version>
-        </dependency>
+            <dependency>
+                <groupId>org.zkoss.zk</groupId>
+                <artifactId>zul
+                </artifactId>                 <!--  an XML-formatted and easy-to read language,  is used to describe ui  -->
+                <version>${zk.version}</version>
+            </dependency>
 
-        <dependency>
-            <groupId>org.zkoss.zk</groupId>
-            <artifactId>zul
-            </artifactId>                 <!--  an XML-formatted and easy-to read language,  is used to describe ui  -->
-            <version>${zk.version}</version>
-        </dependency>
+            <dependency>
+                <groupId>org.zkoss.zk</groupId>
+                <artifactId>zhtml</artifactId>                <!-- xhtml and zhtml -->
+                <version>${zk.version}</version>
+            </dependency>
 
-        <dependency>
-            <groupId>org.zkoss.zk</groupId>
-            <artifactId>zhtml</artifactId>                <!-- xhtml and zhtml -->
-            <version>${zk.version}</version>
-        </dependency>
+            <dependency>
+                <groupId>org.zkoss.zk</groupId>
+                <artifactId>zk</artifactId>
+                <version>${zk.version}</version>
+            </dependency>
 
-        <dependency>
-            <groupId>org.zkoss.zk</groupId>
-            <artifactId>zk</artifactId>
-            <version>${zk.version}</version>
-        </dependency>
-
-        <!-- commons -->
-        <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>           <!-- is a library of utilities to assist with developing
+            <!-- commons -->
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>           <!-- is a library of utilities to assist with developing
                                                               IO functionality -->
-            <version>${commons-io}</version>
-        </dependency>
+                <version>${commons-io}</version>
+            </dependency>
 
-        <dependency>
-            <groupId>commons-dbcp</groupId>
-            <artifactId>commons-dbcp</artifactId>
-            <version>${commons-dbcp.version}</version>
-            <scope>runtime</scope>
-        </dependency>
+            <dependency>
+                <groupId>commons-dbcp</groupId>
+                <artifactId>commons-dbcp</artifactId>
+                <version>${commons-dbcp.version}</version>
+                <scope>runtime</scope>
+            </dependency>
 
-        <!--    Spring -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-core</artifactId>          <!-- provide the fundamental parts of the framework -->
-            <version>${spring.version}</version>
-        </dependency>
+            <!--    Spring -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-core</artifactId>          <!-- provide the fundamental parts of the framework -->
+                <version>${spring.version}</version>
+            </dependency>
 
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-beans</artifactId>         <!-- provide the fundamental parts of the framework -->
-            <version>${spring.version}</version>
-        </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-beans</artifactId>         <!-- provide the fundamental parts of the framework -->
+                <version>${spring.version}</version>
+            </dependency>
 
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-web</artifactId>            <!-- basic web-oriented integration features -->
-            <version>${spring.version}</version>
-        </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-web</artifactId>            <!-- basic web-oriented integration features -->
+                <version>${spring.version}</version>
+            </dependency>
 
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>  <!-- adds support for internationalization (using, for example,
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>  <!-- adds support for internationalization (using, for example,
                                                            resource bundles), event propagation, resource loading -->
-            <version>${spring.version}</version>
-        </dependency>
+                <version>${spring.version}</version>
+            </dependency>
 
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-test</artifactId>      <!--supports unit testing -->
-            <version>${spring.version}</version>
-            <scope>test</scope>
-        </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-test</artifactId>      <!--supports unit testing -->
+                <version>${spring.version}</version>
+                <scope>test</scope>
+            </dependency>
 
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-tx</artifactId>      <!--transaction -->
-            <version>${spring.version}</version>
-        </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-tx</artifactId>      <!--transaction -->
+                <version>${spring.version}</version>
+            </dependency>
 
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-orm</artifactId>      <!--object relational mapping -->
-            <version>${spring.version}</version>
-        </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-orm</artifactId>      <!--object relational mapping -->
+                <version>${spring.version}</version>
+            </dependency>
 
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-jdbc</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jdbc</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
 
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-web</artifactId>
-            <version>4.2.2.RELEASE</version>
-        </dependency>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-web</artifactId>
+                <version>4.2.2.RELEASE</version>
+            </dependency>
 
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-config</artifactId>
-            <version>4.2.2.RELEASE</version>
-        </dependency>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-config</artifactId>
+                <version>4.2.2.RELEASE</version>
+            </dependency>
 
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-framework-bom</artifactId>
-            <version>4.3.5.RELEASE</version>
-            <type>pom</type>
-            <scope>import</scope>
-        </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-framework-bom</artifactId>
+                <version>4.3.5.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
 
-        <!-- hibernate -->
-        <dependency>
-            <groupId>org.hibernate.javax.persistence</groupId>
-            <artifactId>hibernate-jpa-2.1-api</artifactId>
-            <version>${hibernate.jpa.version}</version>
-        </dependency>
+            <!-- hibernate -->
+            <dependency>
+                <groupId>org.hibernate.javax.persistence</groupId>
+                <artifactId>hibernate-jpa-2.1-api</artifactId>
+                <version>${hibernate.jpa.version}</version>
+            </dependency>
 
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-core</artifactId>
-            <version>${hibernate.version}</version>
-        </dependency>
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-core</artifactId>
+                <version>${hibernate.version}</version>
+            </dependency>
 
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-entitymanager</artifactId>
-            <version>${hibernate.version}</version>
-        </dependency>
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-entitymanager</artifactId>
+                <version>${hibernate.version}</version>
+            </dependency>
 
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-jpamodelgen</artifactId>
-            <version>${hibernate.version}</version>
-            <scope>provided</scope>
-        </dependency>
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-jpamodelgen</artifactId>
+                <version>${hibernate.version}</version>
+                <scope>provided</scope>
+            </dependency>
 
 
-        <dependency>
-            <groupId>org.tuckey</groupId>
-            <artifactId>urlrewritefilter</artifactId>
-            <version>${url-rewrite-filter}</version>
-        </dependency>
+            <dependency>
+                <groupId>org.tuckey</groupId>
+                <artifactId>urlrewritefilter</artifactId>
+                <version>${url-rewrite-filter}</version>
+            </dependency>
 
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <version>1.4.194</version>
-        </dependency>
+            <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>6.0.6</version>
+            </dependency>
 
-        <dependency>
-            <groupId>org.flywaydb</groupId>
-            <artifactId>flyway-core</artifactId>
-            <version>4.2.0</version>
-        </dependency>
-    </dependencies>
+            <dependency>
+                <groupId>com.h2database</groupId>
+                <artifactId>h2</artifactId>
+                <version>1.4.194</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-core</artifactId>
+                <version>4.2.0</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 
     <build>

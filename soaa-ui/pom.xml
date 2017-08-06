@@ -25,10 +25,6 @@
         </dependency>
         <dependency>
             <groupId>org.zkoss.zk</groupId>
-            <artifactId>zkplus</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.zkoss.zk</groupId>
             <artifactId>zhtml</artifactId>
         </dependency>
         <dependency>
@@ -44,20 +40,8 @@
             <artifactId>spring-web</artifactId>            <!-- basic web-oriented integration features -->
         </dependency>
         <dependency>
-            <groupId>org.imgscalr</groupId>
-            <artifactId>imgscalr-lib</artifactId>
-        </dependency>
-        <dependency>
             <groupId>org.tuckey</groupId>
             <artifactId>urlrewritefilter</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>commons-lang</groupId>
-            <artifactId>commons-lang</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.security</groupId>
